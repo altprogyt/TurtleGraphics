@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="DrawShape"/>
+        <attribute name="authors" value="Mark A Puddephat"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-05-30 07:07:47 PM"/>
+        <attribute name="created" value="TWFyayBBIFB1ZGRlcGhhdDtNUExYNi1XSU4xMTsyMDI1LTA1LTMwOzA2OjQ5OjAxIFBNOzM0ODg="/>
+        <attribute name="edited" value="TWFyayBBIFB1ZGRlcGhhdDtNUExYNi1XSU4xMTsyMDI1LTA1LTMwOzA3OjA3OjQ3IFBNOzI7MzYwMg=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <clear/>
+            <home/>
+            <declare name="length" type="Real" array="False" size=""/>
+            <declare name="angle" type="Real" array="False" size=""/>
+            <declare name="totalangle" type="Integer" array="False" size=""/>
+            <assign variable="totalangle" expression="0"/>
+            <input variable="length"/>
+            <input variable="angle"/>
+            <clear/>
+            <home/>
+            <do expression="totalangle % 360 != 0">
+                <forward expression="length" pen="down"/>
+                <turn expression="angle" rotate="right"/>
+                <assign variable="totalangle" expression="totalangle + Int(angle)"/>
+            </do>
+        </body>
+    </function>
+</flowgorithm>
